@@ -1,0 +1,336 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+
+<!-- multiselect jquery plugin for dropdown-->
+    <link href="jquery.multiselect.css" rel="stylesheet" type="text/css">
+    <script src="jquery.min.js"></script>
+    <script src="jquery.multiselect.js"></script>
+    
+
+
+  <link rel="stylesheet" href="chosen/chosen.css">
+  <style type="text/css" media="all">
+    /* fix rtl for demo */
+    .chosen-rtl .chosen-drop { left: -9000px; }
+  </style>
+    <script>
+     $(Document).ready(function() {
+       $('#langOpt').multiselect({
+          columns: 1,
+          placeholder: 'Select Languages'
+      });
+     });
+    </script>
+    
+    
+  </head><body>
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><span>jiit NAPS</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active">
+              <a href="main-page.html">Home</a>
+            </li>
+            <li class="">
+              <a href="about-us.html">About Us</a>
+            </li>
+            <li>
+              <a href="feedback.html">FEEDBACK</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">TO<br><i class="fa fa-caret-down fa-fw"></i></a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <a href="notices.html">NOTICES</a>
+                </li>
+                <li>
+                  <a href="assignments.html">ASSIGNMENTS</a>
+                </li>
+                <li>
+                  <a href="projects.php">PROJECTS</a>
+                </li>
+                <li>
+                  <a href="societies.html">SOCIETIES</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="logout.php">Logout</a>
+            </li>
+          </ul>
+          <p class="navbar-left navbar-text">MY BUSINESS IS READY FOR THE BUSINESS</p>
+        </div>
+      </div>
+    </div>
+    <div class="section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>NOTICES</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="page-header">
+              <h1>create notice</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <form class="form-horizontal" role="form" action="insert_notice.php" method="POST">
+              <div class="form-group">
+                <div class="col-sm-2">
+                  <label for="title" class="control-label">TITLE</label>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="title" placeholder="TITLE" name="title">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-2">
+                  <label for="desc" class="control-label">NOTICE</label>
+                </div>
+                <div class="col-sm-10">
+                  <textarea class="form-control" id="desc" placeholder="type what you want to get noticed" name="notice" rows="5"></textarea>
+                </div>
+              </div>
+             
+              <div class="form-group">
+                <div class="col-sm-2">
+                  <label for="to" class="control-label">TO</label>
+                </div>
+                <div class="col-sm-5">
+                  <select data-placeholder=" 1st year " class="chosen-select" multiple style="width:450px;" tabindex="40" name="firstyear[]">
+            <option value=""></option>
+            <optgroup label="CSE">
+            <option value="1F1">F1</option>
+            <option value="1F2">f2</option>
+            <option value="1F3">f3</option>
+            <option value="1F4">f4</option>
+            <option value="1F5">f5</option>
+            <option value="1F6">f6</option>
+            <option value="1F7">f7</option>
+            <option value="1F8">f8</option>
+          </optgroup>
+          <optgroup label="ECE"> 
+            <option value="1E1">e1</option>
+            <option value="1E2">e2</option>
+            <option value="1E3">e3</option>
+            <option value="1E4">e4</option>
+            <option value="1E5">e5</option>
+            <option value="1E6">e6</option>
+            <option value="1E7">e7</option>
+            <option value="1E8">e8</option>
+          </optgroup>
+            
+          </select>
+        </div>
+                
+      
+      
+                <div class="col-sm-5">
+                  <select data-placeholder=" 2nd year " class="chosen-select" multiple style="width:450px;" tabindex="40" name="secondyear[]">
+            <option value=""></option>
+            <optgroup label="CSE">
+            <option value="2F1">F1</option>
+            <option value="2F2">f2</option>
+            <option value="2F3">f3</option>
+            <option value="2F4">f4</option>
+            <option value="2F5">f5</option>
+            <option value="2F6">f6</option>
+            <option value="2F7">f7</option>
+            <option value="2F8">f8</option>
+          </optgroup>
+          <optgroup label="ECE"> 
+            <option value="2E1">e1</option>
+            <option value="2E2">e2</option>
+            <option value="2E3">e3</option>
+            <option value="2E4">e4</option>
+            <option value="2E5">e5</option>
+            <option value="2E6">e6</option>
+            <option value="2E7">e7</option>
+            <option value="2E8">e8</option>
+          </optgroup>
+            
+          </select>
+        </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-2">
+                  <label for="to" class="control-label">TO</label>
+                </div>
+                 <div class="col-sm-5">
+                  <select data-placeholder=" 3rd year " class="chosen-select" multiple style="width:450px;" tabindex="40" name="thirdyear[]">
+            <option value=""></option>
+            <optgroup label="CSE">
+            <option value="3F1">F1</option>
+            <option value="3F2">f2</option>
+            <option value="3F3">f3</option>
+            <option value="3F4">f4</option>
+            <option value="3F5">f5</option>
+            <option value="3F6">f6</option>
+            <option value="3F7">f7</option>
+            <option value="3F8">f8</option>
+          </optgroup>
+          <optgroup label="ECE"> 
+            <option value="3E1">e1</option>
+            <option value="3E2">e2</option>
+            <option value="3E3">e3</option>
+            <option value="3E4">e4</option>
+            <option value="3E5">e5</option>
+            <option value="3E6">e6</option>
+            <option value="3E7">e7</option>
+            <option value="3E8">e8</option>
+          </optgroup>
+            
+          </select>
+        </div>
+                   <div class="col-sm-5">
+                  <select data-placeholder=" 4th year " class="chosen-select" multiple style="width:450px;" tabindex="40" name="fourthyear[]">
+            <option value=""></option>
+            <optgroup label="CSE">
+            <option value="4F1">F1</option>
+            <option value="4F2">f2</option>
+            <option value="4F3">f3</option>
+            <option value="4F4">f4</option>
+            <option value="4F5">f5</option>
+            <option value="4F6">f6</option>
+            <option value="4F7">f7</option>
+            <option value="4F8">f8</option>
+          </optgroup>
+          <optgroup label="ECE"> 
+            <option value="4E1">e1</option>
+            <option value="4E2">e2</option>
+            <option value="4E3">e3</option>
+            <option value="4E4">e4</option>
+            <option value="4E5">e5</option>
+            <option value="4E6">e6</option>
+            <option value="4E7">e7</option>
+            <option value="4E8">e8</option>
+          </optgroup>
+            
+          </select>
+        </div>
+
+              </div>
+
+              <div class="form-group">
+                <div class="col-sm-2">
+                  <label for="website" class="control-label">SUBJECT</label>
+                </div>
+               <div class="col-sm-5">
+                  <select data-placeholder="Choose a Country..." class="chosen-select"  style="width:350px;" tabindex="40" name="subject">
+                   <option value=""></option>
+                  <option value="Turkey">Turkey</option>
+           <option value="Turkey">Turkey</option>
+            <option value="Turkmenistan">Turkmenistan</option>
+            <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+            <option value="Tuvalu">Tuvalu</option>
+            <option value="Uganda">Uganda</option>
+            <option value="Ukraine">Ukraine</option>
+            <option value="United Arab Emirates">United Arab Emirates</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="United States">United States</option>
+            <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="Uzbekistan">Uzbekistan</option>
+            <option value="Vanuatu">Vanuatu</option>
+            <option value="Venezuela, Bolivarian Republic of">Venezuela, Bolivarian Republic of</option>
+            <option value="Viet Nam">Viet Nam</option>
+            <option value="Virgin Islands, British">Virgin Islands, British</option>
+            <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+            <option value="Wallis and Futuna">Wallis and Futuna</option>
+            <option value="Western Sahara">Western Sahara</option>
+            <option value="Yemen">Yemen</option>
+            <option value="Zambia">Zambia</option>
+            <option value="Zimbabwe">Zimbabwe</option>
+
+                  </select>
+                  </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-danger btn-lg">POST
+                    <i class="fa fa-star fa-fw"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12"></div>
+        </div>
+      </div>
+    </div>
+    <footer class="section section-primary ">
+      <div class="container ">
+        <div class="row ">
+          <div class="col-sm-6 ">
+            <h1>This is a minor project</h1>
+            <p class="lead ">- Sanket Deshpande
+              <br>- Rishabh Agarwal
+              <br>- Disha Gupta</p>
+          </div>
+          <div class="col-sm-6 ">
+            <p class="lead text-right text-warning "></p>
+            <div class="row ">
+              <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left ">
+                <a href="# "><i class="fa fa-3x fa-fw fa-instagram text-inverse "></i></a>
+                <a href="# "><i class="fa fa-3x fa-fw fa-twitter text-inverse "></i></a>
+                <a href="# "><i class="fa fa-3x fa-fw fa-facebook text-inverse "></i></a>
+                <a href="# "><i class="fa fa-3x fa-fw fa-github text-inverse "></i></a>
+              </div>
+            </div>
+            <div class="row ">
+              <div class="col-md-12 hidden-xs text-right ">
+                <a href="# "><i class="fa fa-3x fa-fw fa-facebook text-inverse "></i></a>
+                <a href="# "><i class="fa fa-3x fa-fw fa-github text-inverse "></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+  <!-- chosen jquery plugin for dropdown -->
+     <script src="chosen/chosen.jquery.js" type="text/javascript"></script>
+  <script src="chosen/docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    var config = {
+      '.chosen-select'           : {},
+      '.chosen-select-deselect'  : {allow_single_deselect:true},
+      '.chosen-select-no-single' : {disable_search_threshold:10},
+      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+      '.chosen-select-width'     : {width:"90%"}
+    }
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
+  </script>
+</body></html>
