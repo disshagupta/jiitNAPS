@@ -1,0 +1,289 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+
+<!-- multiselect jquery plugin for dropdown-->
+    <link href="jquery.multiselect.css" rel="stylesheet" type="text/css">
+    <script src="jquery.min.js"></script>
+    <script src="jquery.multiselect.js"></script>
+    
+
+
+  <link rel="stylesheet" href="chosen/chosen.css">
+  <style type="text/css" media="all">
+    /* fix rtl for demo */
+    .chosen-rtl .chosen-drop { left: -9000px; }
+  </style>
+    <script>
+     $(Document).ready(function() {
+       $('#langOpt').multiselect({
+          columns: 1,
+          placeholder: 'Select Languages'
+      });
+     });
+    </script>
+    
+    
+  </head><body>
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><span>jiit NAPS</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active">
+              <a href="main-page.html">Home</a>
+            </li>
+            <li class="">
+              <a href="about-us.html">About Us</a>
+            </li>
+            <li>
+              <a href="feedback.html">FEEDBACK</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">TO<br><i class="fa fa-caret-down fa-fw"></i></a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <a href="notices.html">NOTICES</a>
+                </li>
+                <li>
+                  <a href="assignments.html">ASSIGNMENTS</a>
+                </li>
+                <li>
+                  <a href="projects.php">PROJECTS</a>
+                </li>
+                <li>
+                  <a href="societies.html">SOCIETIES</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="logout.php">Logout</a>
+            </li>
+          </ul>
+          <p class="navbar-left navbar-text">MY BUSINESS IS READY FOR THE BUSINESS</p>
+        </div>
+      </div>
+    </div>
+    <div class="section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>ASSIGNMENTS</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="page-header">
+              <h1>create assignment</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <form class="form-horizontal" role="form" action="insert_assignment.php" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
+                <div class="col-sm-2">
+                  <label for="title" class="control-label">TITLE</label>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="title" placeholder="TITLE" name="title">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-2">
+                  <label for="assignment" class="control-label">ASSIGNMENT</label>
+                </div>
+                <div class="col-sm-10">
+                    <input type="file" class="form-control" id="assignment" placeholder="upload assignment" name="file">
+                </div>
+              </div>
+             
+              
+
+              <div class="form-group">
+                <div class="col-sm-2">
+                  <label for="website" class="control-label">SUBJECT</label>
+                </div>
+               <div class="col-sm-5">
+                  <select data-placeholder="Choose a Subject..." class="chosen-select"  style="width:350px;" tabindex="40" name="subject"> 
+                   <option value=""></option>
+            <option value="Electrical Science -I">Electrical Science -I</option>
+            <option value="Electrical Science -II">Electrical Science -II</option>
+            <option value="Electrical Machines and Instrumentation">Electrical Machines and Instrumentation</option>
+            <option value="Signals and Systems">Signals and Systems</option>
+            <option value="Digital Electronics">Digital Electronics</option>
+            <option value="Digital System Design">Digital System Design</option>
+            <option value="Analogue Electronics">Analogue Electronics</option>
+            <option value="Analog Communications">Analog Communications</option>
+            <option value="Digital Signal Processing">Digital Signal Processing</option>
+            <option value="VLSI Technology and Applications">VLSI Technology and Applications</option>
+            <option value="Digital Communications">Digital Communications</option>
+            <option value="Telecommunication Networks">Telecommunication Networks</option>
+            <option value="Electromagnetic Engineering">Electromagnetic Engineering</option>
+            <option value=" Control Systems"> Control Systems</option>
+            <option value="Mobile Communications">Mobile Communications</option>
+            <option value="Electrical Circuit Analysis">Electrical Circuit Analysis</option>
+            <option value="Basic Electronic Devices and Circuits">Basic Electronic Devices and Circuits</option>
+            <option value="Communication Systems">Communication Systems</option>
+            <option value=" Digital Hardware Design "> Digital Hardware Design</option>
+            <option value="Essentials of VLSI Testing">Essentials of VLSI Testing</option>
+            <option value="Information Theory and Applications">Information Theory and Applications</option>
+            <option value="Satellite Communication">Satellite Communication</option>
+            <option value="Soft Computing Techniques">Soft Computing Techniques</option>
+            <option value="Antenna Theory and Design">Antenna Theory and Design</option>
+            <option value="Digital Image Processing">Digital Image Processing</option>
+            <option value=" Interface Design"> Interface Design</option>
+            <option value="Fundamentals of Embedded Systems">Fundamentals of Embedded Systems</option>
+            <option value=" Introduction to Computers and programming"> Introduction to Computers and programming</option>
+            <option value="Data Structures and Computer Programming">Data Structures and Computer Programming</option>
+            <option value="Object Oriented Programming">Object Oriented Programming</option>
+            <option value="Database Systems">Database Systems</option>
+            <option value="Microprocessor and Controllers">Microprocessor and Controllers</option>
+            <option value="Computer Organisation">Computer Organisation</option>
+            <option value="Fundamentals of Algorithms">Fundamentals of Algorithms</option>
+            <option value=" Operating Systems"> Operating Systems</option>
+            <option value="Software Engineering">Software Engineering</option>
+            <option value="Theory of computation">Theory of computation</option>
+            <option value="Web Application Engineering">Web Application Engineering</option>
+            <option value="Computer Networks">Computer Networks</option>
+            <option value="Information Systems">Information Systems</option>
+            <option value="Data Mining">Data Mining</option>
+            <option value="Compiler Design">Compiler Design</option>
+            <option value=" Computer Organization and Architecture"> Computer Organization and Architecture</option>
+            <option value="Artificial Intelligence">Artificial Intelligence</option>
+            <option value="Cloud Computing">Cloud Computing</option>
+            <option value="Mobile Computing">Mobile Computing</option>
+            <option value="Theory of Automata and Compiler Design ">Theory of Automata and Compiler Design </option>
+            <option value="Human Computer Interaction">Human Computer Interaction</option>
+            <option value="E-Commerce">E-Commerce</option>
+            <option value="Mobile Application Engineering ">Mobile Application Engineering </option>
+            <option value="Cryptography and Network Security">Cryptography and Network Security</option>
+            <option value="Natural Language Processing">Natural Language Processing</option>
+            <option value="Software Quality">Software Quality</option>
+            <option value="Image Processing">Image Processing</option>
+            <option value="Distributed Computing">Distributed Computing</option>
+            <option value="Software Engineering Management">Software Engineering Management</option>
+            <option value="Multimedia Computing">Multimedia Computing</option>
+            <option value="Parallel Processing">Parallel Processing</option>
+            <option value=" Wireless and Mobile Adhoc Networks"> Wireless and Mobile Adhoc Networks</option>
+            <option value=" Mobile Application Development"> Mobile Application Development</option>
+            <option value="Software Design ">Software Design </option>
+            <option value="Information Retrieval & Data Mining ">Information Retrieval & Data Mining </option>
+            <option value=" Robotics"> Robotics</option>
+            <option value="Industrial Automation">Industrial Automation</option>
+            <option value="Advanced Data Structures">Advanced Data Structures</option>
+            <option value="Network Programming">Network Programming</option>
+            <option value="Systems Programming">Systems Programming</option>
+            <option value="Computer Graphics">Computer Graphics</option>
+            <option value="Multidimensional Data Structures">Multidimensional Data Structures</option>
+            <option value="Design of Database Systems"></option>
+            <option value="Computer games">Computer games</option>
+            <option value="Graph Algorithm and Applications">Graph Algorithm and Applications</option>
+            <option value="Software Construction">Software Construction</option>
+            <option value=" Embedded System Design"> Embedded System Design</option>
+            <option value="Soft Computing">Soft Computing</option>
+            <option value="Performance Analysis of Computing System">Performance Analysis of Computing System  </option>
+            <option value="Design of Algorithm">Design of Algorithm</option>
+            <option value="Digital Audio and Speech processing ">Digital Audio and Speech processing </option>
+            <option value=" Human Aspects for Information Technology "> Human Aspects for Information Technology </option>
+            <option value="Theory of Knowledge, Learning, and Research">Theory of Knowledge, Learning, and Research</option>
+            <option value="Multimedia Interaction Design ">Multimedia Interaction Design </option>
+           
+
+                  </select>
+                  </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-2">
+                  <label for="lastdate" class="control-label">LAST DATE OF SUBMISION</label>
+                </div>
+                <div class="col-sm-5">
+                    <input type="date" class="form-control" id="lastdate" placeholder="" name="lastdate"> // last date to have left margin like other.
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-danger btn-lg">POST
+                    <i class="fa fa-star fa-fw"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12"></div>
+        </div>
+      </div>
+    </div>
+    <footer class="section section-primary ">
+      <div class="container ">
+        <div class="row ">
+          <div class="col-sm-6 ">
+            <h1>This is a minor project</h1>
+            <p class="lead ">- Sanket Deshpande
+              <br>- Rishabh Agarwal
+              <br>- Disha Gupta</p>
+          </div>
+          <div class="col-sm-6 ">
+            <p class="lead text-right text-warning "></p>
+            <div class="row ">
+              <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left ">
+                <a href="# "><i class="fa fa-3x fa-fw fa-instagram text-inverse "></i></a>
+                <a href="# "><i class="fa fa-3x fa-fw fa-twitter text-inverse "></i></a>
+                <a href="# "><i class="fa fa-3x fa-fw fa-facebook text-inverse "></i></a>
+                <a href="# "><i class="fa fa-3x fa-fw fa-github text-inverse "></i></a>
+              </div>
+            </div>
+            <div class="row ">
+              <div class="col-md-12 hidden-xs text-right ">
+                <a href="# "><i class="fa fa-3x fa-fw fa-facebook text-inverse "></i></a>
+                <a href="# "><i class="fa fa-3x fa-fw fa-github text-inverse "></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+  <!-- chosen jquery plugin for dropdown -->
+     <script src="chosen/chosen.jquery.js" type="text/javascript"></script>
+  <script src="chosen/docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    var config = {
+      '.chosen-select'           : {},
+      '.chosen-select-deselect'  : {allow_single_deselect:true},
+      '.chosen-select-no-single' : {disable_search_threshold:10},
+      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+      '.chosen-select-width'     : {width:"90%"}
+    }
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
+  </script>
+            <option value="">Zimbabwe</option>
+            <option value="">Zimbabwe</option>
+</body></html>
